@@ -125,8 +125,9 @@ def interceptor(request, response):
 			print(f"{result['adArchiveID']=}, {result['requestDate']=} ", result)
 
 			# Save dict to csv
+			result_df = pd.DataFrame([result])
 			# df = df.append(result, ignore_index=True)
-			df = pd.concat([df, result], ignore_index=True)
+			df = pd.concat([df, result_df], ignore_index=True)
 			df.to_csv(csv_out_path, mode="a", header=not os.path.exists(csv_out_path))
 			print(f"Result written to csv file, {len(df)}")
 
