@@ -89,7 +89,7 @@ def build_ads_library_url(
 	encoded_params = urlencode(query_params)
 
 	# Build the complete URL
-	url = urlunparse(("https", "www.facebook.com", "/ads/library/", "", encoded_params, ""))
+	url = urlunparse(("https://pt-br.facebook.com/ads/library/?active_status=all&ad_type=all&country=BR&q=brasil%20paralelo&sort_data[direction]=desc&sort_data[mode]=relevancy_monthly_grouped&search_type=keyword_unordered&media_type=all"))
 	return url
 
 
